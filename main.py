@@ -1,9 +1,8 @@
 import tweepy
 import webbrowser
+from config import consumer_key, consumer_secret, callback
 
-
-
-auth = tweepy.OAuthHandler('vivazXllSNLbVVFC8aVwCOLFj', 'mvoOwUs3SlP4fHzNx8XgvONtIwDTcsFanHuwW958DckXjRhl1J', 'oob')
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret, callback)
 
 redirect_url = auth.get_authorization_url()
 
