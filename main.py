@@ -18,10 +18,8 @@ print(auth.access_token, auth.access_token_secret)
 
 api = tweepy.API(auth)
 
-print(api.me())
 
+image_obj = api.media_upload('bg.png')
 
-
-
-# api.update_status('hello tweepy')
+new_status = api.update_status("This is a great movie ", media_ids = [image_obj.media_id_string])
 
